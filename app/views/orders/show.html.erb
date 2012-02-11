@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b><%= link_to '@order.species.common_name', orders_path %></b>
+</p>
+
+<p>
+  <%= @order.species.scientific_name %>
+</p>
+
+<p>
+  <b>Sample number:</b>
+  <%= @order.sample_number %>
+</p>
+
+<p>
+  <b>Sample condition:</b>
+  <%= @order.sample_condition %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

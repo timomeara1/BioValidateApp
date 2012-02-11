@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  species_id: 1
+  sample_number: 1
+  sample_condition: MyString
+
+two:
+  species_id: 1
+  sample_number: 1
+  sample_condition: MyString

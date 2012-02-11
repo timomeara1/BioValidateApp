@@ -1,14 +1,105 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>BioValidateApp</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BioValidateApp</title>
+    <%= csrf_meta_tags %>
 
-<%= yield %>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
 
-</body>
+    <!-- Le styles -->
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+          <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="i-bar"></span>
+            <span class="i-bar"></span>
+            <span class="i-bar"></span>
+          </a>
+          <a class="brand" href="#">
+			<div style="color:magenta">
+			 Bio√alidate
+			</div>
+			<div style="color:white"; font-size:20px; >
+			 Where does your seafood come from?
+			</div>
+		  </a>
+
+          <div class="container nav-collapse">
+            <ul class="nav">
+                <li><%= link_to "How it Works", "/path2"  %></li>
+                <li><%= link_to "Order", "/orders/new"  %></li>
+				<li><%= link_to "My Results", "/orders/new"  %></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+          <div class="row">
+            <div class="span9">
+			<div class="well">
+            <%= yield %>
+			</div>
+            </div>
+            <div class="span1">&nbsp;</div>
+            <div class="span3">
+              <div class="well sidebar-nav">
+
+                 <ul class="nav nav-list">
+
+					<li>"Seafood fraud is rampant in the US!!"</li>
+                    <li class="nav-header">- Bubba Gump</li>					
+						<p>
+					<li>"84% of US Seafood is Imported"</li>
+					 <li class="nav-header">- US FDA</li>
+						<p>
+					<li>"25-75% of seafood may be mislabeled"</li>
+					 <li class="nav-header">- Oceana</li>
+						<p>				
+                    <li>“Systemic fish fraud is costing consumers big.”
+					</li>
+					<li class="nav-header">- Lisa Weddig, director, Better seafood Board</li>	
+						<p>
+	
+                    <li>“anonymity through processing is one of the reasons why seafood fraud is so widespread on the u.S. market.”</li>
+					 <li class="nav-header">- Oceana</li>
+                </ul>
+            </div>
+           </div>
+          </div>
+        </div>
+
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "application" %>
+
+  </body>
 </html>

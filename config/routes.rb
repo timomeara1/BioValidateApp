@@ -1,4 +1,8 @@
 BioValidateApp::Application.routes.draw do
+  resources :orders
+  root :to => 'orders#home', :as => "home"
+  get "/species" => 'orders#species', :as => "species"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,7 @@
+<%= link_to 'Home', home_path %>
+
+<h2>Eligible Seafood for Testing:</h2>
+
+<p><% @species_all.each do |species| %></p>
+<p><%= image_tag "#{species.image}" %></p>
+<p><% end %></p>

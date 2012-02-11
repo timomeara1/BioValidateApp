@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  validation: MyString
+  order_id: 1
+  species_id: 1
+
+two:
+  validation: MyString
+  order_id: 1
+  species_id: 1
